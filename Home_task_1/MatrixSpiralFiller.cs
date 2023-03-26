@@ -8,19 +8,31 @@ namespace Home_task_1
 {
     internal static class MatrixSpiralFiller
     {
+        // TODO add tests
         public static void FillMatrixInSpirall(int[,] matrix, bool counterclockwise = true)
         {
             if (counterclockwise)
             {
                 FillMatrixInSpiralCounterclockwise(matrix);
             }
-            FillMatrixInSpiralClockwise(matrix);
+            else
+            {
+                FillMatrixInSpiralClockwise(matrix);
+            }
         }
 
         private static void FillMatrixInSpiralCounterclockwise(int[,] matrix)
         {
             int rows_count = matrix.GetLength(0);
             int cols_count = matrix.GetLength(1);
+
+            if (rows_count == 1)
+            {
+                Console.WriteLine("It is impossible to fill such a matrix counterclockwise because it has only one row." +
+                    "Try the clockwise method");
+                return;
+            }
+
             int operationsCount = rows_count * cols_count;
             // 0 => down, 1 => right, 2 => top, 3 => left
             int direction = 0;
@@ -59,6 +71,13 @@ namespace Home_task_1
         {
             int rows_count = matrix.GetLength(0);
             int cols_count = matrix.GetLength(1);
+
+            if (cols_count == 1)
+            {
+                Console.WriteLine("It is impossible to fill such a matrix counterclockwise because it has only one row." +
+                    "Try the clockwise method");
+                return;
+            }
             int operationsCount = rows_count * cols_count;
             // 0 => right, 1 => bottom, 2 => left, 3 => top
             int direction = 0;
