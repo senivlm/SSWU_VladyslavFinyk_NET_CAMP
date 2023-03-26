@@ -3,3 +3,5 @@ using System.Diagnostics;
 
 TasksRepresenter.Task1_SpiralMatrix();
 TasksRepresenter.Task2_LongestColorFind();
+
+Console.ReadLine();
