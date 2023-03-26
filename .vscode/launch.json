@@ -14,8 +14,9 @@
             "args": [],
             "cwd": "${workspaceFolder}/Home_task_1",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
-            "console": "internalConsole",
-            "stopAtEntry": false
+            // changed because internalTerminal doesn't work with Console.Readline()
+            "console": "externalTerminal",
+            "stopAtEntry": false,
         },
         {
             "name": ".NET Core Attach",
