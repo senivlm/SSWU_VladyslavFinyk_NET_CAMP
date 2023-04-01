@@ -1,7 +1,7 @@
 namespace Home_task_1
 {
     class ColorLineFinder
-    {
+    {// Тут краще не атрибутом зробтити, а результатом методу.
         Dictionary<string, int> _colorInfo;
         int[,] _matrix;
         public ColorLineFinder(int[,] matrix)
