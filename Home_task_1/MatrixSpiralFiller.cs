@@ -27,7 +27,7 @@ namespace Home_task_1
             int cols_count = matrix.GetLength(1);
 
             if (rows_count == 1)
-            {
+            {// роздрук тут лишній
                 Console.WriteLine("It is impossible to fill such a matrix counterclockwise because it has only one row." +
                     "Try the clockwise method");
                 return;
@@ -38,7 +38,7 @@ namespace Home_task_1
             int direction = 0;
             int row = 0, col = 0;
             int boundary = rows_count - 1;
-
+// Покажете Ваш варіант на занятті для всіх
             for (int i = 1; i <= operationsCount; i++)
             {
                 matrix[row, col] = i;
